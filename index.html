@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com -->
   <title>Smooth Painting</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
+</head>
+<style>
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -30,9 +32,9 @@
     font-weight: 400;
     margin-bottom: 30px;
   }
-  .gfg {
-        background-color: #4D8CFC;
-        border: 2px solid #4D8CFC;
+  .quoteButton {
+        background-color: #FDB913;
+        border: 2px solid #FDB913;
         color: #FFFFFF;
         padding: 20px 20px;
         text-align: center;
@@ -41,11 +43,30 @@
         /* margin: 70px 150px; */
         cursor: pointer;
   }
-  .jumbotron {
-    background-color: #4D8CFC;
+  .action_button {
+    padding: 0;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #231F20;
+    border-radius: 3px;
+    float: right;
+  }
+  .main {
+    background-image: url("pics/alex.jpg");
+    padding: 100px 100px;
+    background-size: 100%;
+    /* font-family: Montserrat, sans-serif; */
+    font-family: 'Helvetica Neue';
+  }
+  .mainText {
     color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
+    position: relative;
+    top: 0;
+    margin: 0;
+    background: rgba(35,31,32,0.6);
+    padding: 22px 20px;
   }
   .container-fluid {
     padding: 60px 50px;
@@ -54,12 +75,8 @@
     background-color: #f6f6f6;
   }
   .logo-small {
-    color: #4D8CFC;
+    color: #FDB913;
     font-size: 50px;
-  }
-  .logo {
-    color: #4D8CFC;
-    font-size: 200px;
   }
   .thumbnail {
     padding: 0 0 15px 0;
@@ -71,7 +88,7 @@
     height: 100%;
     margin-bottom: 10px;
   }
-  .carousel-control.right, .carousel-control.left {
+  /* .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #4D8CFC;
   }
@@ -80,7 +97,7 @@
   }
   .carousel-indicators li.active {
     background-color: #4D8CFC;
-  }
+  } */
   .item h4 {
     font-size: 19px;
     line-height: 1.375em;
@@ -91,7 +108,7 @@
   .item span {
     font-style: normal;
   }
-  .panel {
+  /* .panel {
     border: 1px solid #4D8CFC;
     border-radius:0 !important;
     transition: box-shadow 0.5s;
@@ -128,10 +145,10 @@
     margin: 15px 0;
     background-color: #4D8CFC;
     color: #fff;
-  }
+  } */
   .navbar {
     margin-bottom: 0;
-    background-color: #4D8CFC;
+    background-color: #FDB913;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -144,7 +161,7 @@
     color: #fff !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #4D8CFC !important;
+    color: #FDB913 !important;
     background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -154,7 +171,7 @@
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #4D8CFC;
+    color: #FDB913;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -184,64 +201,116 @@
       -webkit-transform: translateY(0%);
     }
   }
-  @media screen and (max-width: 768px) {
+   /* Desktop --------------------------------------------------------------------*/
+   @media screen and (max-width: 2000px) {
+    .main {
+    padding: 100px 100px;
+    background-size: 100%;
+    /* background-position: 100% 0%; */
+    /* background-position-x: 200px; */
+    background-position-y: -400px;
+  }
+  .mainText {
+    padding: 22px; 
+  }
+  }
+  /* Desktop --------------------------------------------------------------------*/
+  @media screen and (max-width: 801px) {
     .col-sm-4 {
       text-align: center;
-      margin: 25px 0;
+      margin: 25px 0px;
     }
     .btn-lg {
       width: 100%;
       margin-bottom: 35px;
     }
+    .main {
+    padding: 100px 100px;
+    background-size: 100%;
+    /* background-position: 100% 0%; */
+    /* background-position-x: 200px; */
   }
-  @media screen and (max-width: 480px) {
+  }
+  /* Phone, could use 550 like certapro --------------------------------------------------------------------*/
+  @media screen and (max-width: 550px) {
     .logo {
       font-size: 150px;
     }
+    .main {
+    padding: 100px 100px;
+    background-size: 100%;
   }
-  </style>
-</head>
+  .action_button {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  }
+</style>
 <body id="smoothPainting" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<!-- NavBar ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <div class="navbar-header">
+    <a class="navbar-brand" href="#smoothPainting">
+      <img src="pics/transBackCut.png" alt="" style="max-width:200px;position:fixed;top:-40px">
+    </a>
+
+    <div class="action_button">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      </button> -->
+      <a class="action_button transition" href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');"> 
+      <!-- <img alt="call now" src="pics/whiteBack.png">  -->
+      <span>(612) 440-3665</span>
+      </a>
+    </div>
+    
+    <!-- Certa Pro Button -->
+    <!-- <a class="action_button transition" href="tel:+1612-431-9061" onclick="evtTrack('Landing', 'Phone', 'Header');"> 
+      <img alt="call now" src="https://certapro.com/wp-content/themes/certapro/landing-templates/img/icon-phone.svg"> 
+      <span>(612) 431-9061</span>
+    </a> -->
+
+    <!-- Our old Navigation Cube, could move to above Free Estimates -->
+    <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#smoothPainting">
-        <img src="transBackCut.png" alt="logo" style="max-width:200px;position:fixed;top:-40px">
-    </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#ourWork">OUR WORK</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <h1>Smooth Painting</h1>
-  <p>We specialize in interior painting <br>in the Twin Cities</p>
+<!-- Main ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="main">
+  <div class="mainText text-center">
+    <h1>Smooth Painting</h1>
+    <p>Interior Painting <br>in the Twin Cities</p>
+  </div>
+  <br><br>
 </div>
 
-<!-- Container (About Section) -->
+<!-- Container (About Section) ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About</h2><br>
+      <h2>Free Estimates</h2><br>
       <h4>Founded here in the Twin Cities, we are a full service painting company that specializes on residential painting including walls, ceilings, trim, and doors.</h4><br>
       <!-- <p>Our mission is to change the way homes are painted around the country.</p> -->
     </div>
+    <!-- Quote Button -->
     <div class="col-sm-4">
       <form action="https://smoothpainting.DripJobs.com">
-         <button class = "gfg" type="submit">
+         <button class = "quoteButton" type="submit">
              Request Quote
          </button>
      </form>
@@ -249,6 +318,7 @@
   </div>
 </div>
 
+<!-- Our Values ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
@@ -262,7 +332,7 @@
   </div>
 </div>
 
-<!-- Container (Services Section) -->
+<!-- Services ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="services" class="container-fluid text-center">
   <h2>SERVICES</h2>
   <h4>What we offer</h4>
@@ -303,10 +373,11 @@
     </div>
   </div>
 </div>
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>Recent work</h4>
+
+<!-- Our Work ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="ourWork" class="container-fluid text-center bg-grey">
+  <h2>OUR WORK</h2><br>
+  <!-- <h4>Recent work</h4> -->
   <div class="row text-center slideanim">
     <!-- <div class="col-sm-4">
       <div class="thumbnail">
@@ -315,23 +386,23 @@
         <p>Yes, we built Paris</p>
       </div>
     </div> -->
-    <!-- <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="2.HEIC" alt="AFTER" width="400" height="300">
-        <p><strong>AFTER</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div> -->
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="1&2.jpg" alt="BOTH" width="400" height="300">
+        <img src="pics/alex.jpg" alt="" width="400" height="300">
+        <p><strong>Cutting in</strong></p>
+        <p>Alex on the stair</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="pics/1&2.jpg" alt="" width="400" height="300">
         <p><strong>Before and After<br>Minneapolis Bedroom</strong></p>
         <p>We gave this room a more modern look by touching up the trim and ceiling as well as changing the color of the walls. Overall giving this home from 1908 a more modern feel!</p>
       </div>
     </div>
   </div><br>
 
-<!-- Container (Contact Section) -->
+<!-- Contact ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
@@ -362,12 +433,14 @@
   </div>
 </div>
 
+<!-- Arrow up ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <footer class="container-fluid text-center">
   <a href="#smoothPainting" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
 </footer>
 
+<!-- Script ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
