@@ -33,15 +33,24 @@
     margin-bottom: 30px;
   }
   .quoteButton {
-        background-color: #FDB913;
-        border: 2px solid #FDB913;
+        background-color: #D2232A;
+        border: 2px solid #D2232A;
         color: #FFFFFF;
         padding: 20px 20px;
         text-align: center;
         display: inline-block;
         font-size: 20px;
-        /* margin: 70px 150px; */
         cursor: pointer;
+  }
+  .arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
   .action_button {
     padding: 0;
@@ -57,8 +66,6 @@
     background-image: url("pics/alex.jpg");
     padding: 100px 100px;
     background-size: 100%;
-    /* font-family: Montserrat, sans-serif; */
-    font-family: 'Helvetica Neue';
   }
   .mainText {
     color: #fff;
@@ -215,7 +222,7 @@
   }
   }
   /* Desktop --------------------------------------------------------------------*/
-  @media screen and (max-width: 801px) {
+  @media screen and (min-width: 801px) {
     .col-sm-4 {
       text-align: center;
       margin: 25px 0px;
@@ -229,7 +236,12 @@
     background-size: 100%;
     /* background-position: 100% 0%; */
     /* background-position-x: 200px; */
-  }
+    }
+    .quoteButton {
+      margin: 70px 150px;
+      padding: 50px 50px;
+      font-size: 20px;
+    }
   }
   /* Phone, could use 550 like certapro --------------------------------------------------------------------*/
   @media screen and (max-width: 550px) {
@@ -255,80 +267,40 @@
     <a class="navbar-brand" href="#smoothPainting">
       <img src="pics/transBackCut.png" alt="" style="max-width:200px;position:fixed;top:-40px">
     </a>
-
     <div class="action_button">
-      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-      </button> -->
       <a class="action_button transition" href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');"> 
-      <!-- <img alt="call now" src="pics/whiteBack.png">  -->
       <span>(612) 440-3665</span>
       </a>
     </div>
-    
-    <!-- Certa Pro Button -->
-    <!-- <a class="action_button transition" href="tel:+1612-431-9061" onclick="evtTrack('Landing', 'Phone', 'Header');"> 
-      <img alt="call now" src="https://certapro.com/wp-content/themes/certapro/landing-templates/img/icon-phone.svg"> 
-      <span>(612) 431-9061</span>
-    </a> -->
-
-    <!-- Our old Navigation Cube, could move to above Free Estimates -->
-    <!-- <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#ourWork">OUR WORK</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div> -->
   </div>
 </nav>
 
 <!-- Main ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="main">
   <div class="mainText text-center">
-    <h1>Smooth Painting</h1>
-    <p>Interior Painting <br>in the Twin Cities</p>
+    <h1 style="font-family: 'New Century Schoolbook, TeX Gyre Schola, serif'">Smooth Painting</h1>
+    <p style="font-family: 'Helvetica Neue'">Interior Painting <br>in the Twin Cities</p>
   </div>
   <br><br>
 </div>
 
 <!-- Container (About Section) ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="about" class="container-fluid">
+<div id="about" class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-8">
       <h2>Free Estimates</h2><br>
       <h4>Founded here in the Twin Cities, we are a full service painting company that specializes on residential painting including walls, ceilings, trim, and doors.</h4><br>
+      <h4><strong>MISSION:</strong> No job is too large or too difficult for us. We pride ourselves on our professionalism, quality, and skillset. Click the "Request Quote" button for a free quote.</h4><br>
       <!-- <p>Our mission is to change the way homes are painted around the country.</p> -->
     </div>
     <!-- Quote Button -->
     <div class="col-sm-4">
       <form action="https://smoothpainting.DripJobs.com">
          <button class = "quoteButton" type="submit">
-             Request Quote
+             Request Quote  <i class="arrow right"></i>
          </button>
      </form>
      </div>
-  </div>
-</div>
-
-<!-- Our Values ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> No job is too large or too difficult for us. We pride ourselves on our professionalism, quality, and skillset. Click the "Request Quote" button for a free quote.</h4><br>
-      <!-- <p><strong>VISION:</strong> We believe all houses should be painted with love.</p> -->
-    </div>
   </div>
 </div>
 
@@ -376,27 +348,27 @@
 
 <!-- Our Work ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="ourWork" class="container-fluid text-center bg-grey">
-  <h2>OUR WORK</h2><br>
+  <h2>RECENT WORK</h2><br>
   <!-- <h4>Recent work</h4> -->
   <div class="row text-center slideanim">
-    <!-- <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="1.heic" alt="BEFORE" width="400" height="300">
-        <p><strong>BEFORE</strong></p>
-        <p>Yes, we built Paris</p>
-      </div>
-    </div> -->
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="pics/alex.jpg" alt="" width="400" height="300">
-        <p><strong>Cutting in</strong></p>
-        <p>Alex on the stair</p>
+        <img src="pics/livingRoom.jpg" alt="" width="400" height="300">
+        <p><strong>Prep</strong></p>
+        <p>We make sure no paint gets anywhere by covering the floor, windows, etc</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="pics/1&2.jpg" alt="" width="400" height="300">
-        <p><strong>Before and After<br>Minneapolis Bedroom</strong></p>
+        <img src="pics/entrance.jpg" alt="" width="400" height="300">
+        <p><strong>The entrance</strong></p>
+        <p>The new color really opened up this entrance!</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="pics/room.jpg" alt="" width="400" height="300">
+        <p><strong>A Bedroom</strong></p>
         <p>We gave this room a more modern look by touching up the trim and ceiling as well as changing the color of the walls. Overall giving this home from 1908 a more modern feel!</p>
       </div>
     </div>
