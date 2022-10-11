@@ -58,10 +58,10 @@
   display: inline-block;
   padding: 3px;
   }
-  /* .right {
+  .right {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-0deg);
-  } */
+    -webkit-transform: rotate(-45deg);
+  }
   .action_button {
     padding: 0;
     font-size: 22px;
@@ -104,6 +104,9 @@
     width: 100%;
     height: 100%;
     margin-bottom: 10px;
+  }
+  .carousel-inner {
+    height: 400px;
   }
   .carousel-control.right, .carousel-control.left {
     background-image: none;
@@ -387,12 +390,6 @@
 <!-- Reviews ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <h2>What our customers say</h2>
   <div id="myCarousel" class="carousel slide text-center bg-grey" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -409,6 +406,13 @@
           <span>Steve <br>Google</span></h4>
       </div>
     </div>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
     <!-- TODO: good feature but the buttons block text on mobile -->
     <!-- Left and right controls -->
