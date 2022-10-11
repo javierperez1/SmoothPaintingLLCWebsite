@@ -58,10 +58,10 @@
   display: inline-block;
   padding: 3px;
   }
-  .right {
+  /* .right {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
+    -webkit-transform: rotate(-0deg);
+  } */
   .action_button {
     padding: 0;
     font-size: 22px;
@@ -105,7 +105,7 @@
     height: 100%;
     margin-bottom: 10px;
   }
-  /* .carousel-control.right, .carousel-control.left {
+  .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #4D8CFC;
   }
@@ -114,7 +114,7 @@
   }
   .carousel-indicators li.active {
     background-color: #4D8CFC;
-  } */
+  }
   .item h4 {
     font-size: 19px;
     line-height: 1.375em;
@@ -383,6 +383,45 @@
       </div>
     </div>
   </div><br>
+
+<!-- Reviews ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center bg-grey" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Project was to paint two bedrooms. Ceiling to floor. The guys were on time courteous and completed the project with high quality. We will be hiring again!!"<br>
+          <span>Steve G. <br>Angi Leads</span></h4>
+      </div>
+      <div class="item">
+        <h4>"They were fast and painted same day. They had three guys and finished in 4.5 hours 3 rooms!"<br>
+          <span>Angi D. <br>Angi Leads</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Great job Smooth Painting. Excellent attention to detail. No drips/random drops, plastic everywhere. Finishes were great. Cam back following day for additional coverage. They painted two bedrooms that included ceiling, walls, trim, and doors. Job well done!"<br>
+          <span>Steve <br>Google</span></h4>
+      </div>
+    </div>
+
+    <!-- TODO: good feature but the buttons block text on mobile -->
+    <!-- Left and right controls -->
+    <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a> -->
+  </div>
+</div>
 
 <!-- Contact ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="contact" class="container-fluid bg-grey">
