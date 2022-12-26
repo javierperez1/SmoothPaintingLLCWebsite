@@ -43,9 +43,9 @@
     margin-bottom: 30px;
   }
   .quoteButton {
-        background-color: #D2232A;
-        border: 2px solid #D2232A;
-        color: #FFFFFF;
+        background-color: #FDB913;
+        border: 2px solid #FDB913;
+        color: #000000;
         padding: 20px 20px;
         text-align: center;
         display: inline-block;
@@ -53,10 +53,10 @@
         cursor: pointer;
   }
   .arrow {
-  border: solid white;
-  border-width: 0 3px 3px 0;
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
   display: inline-block;
-  padding: 3px;
+  padding: 6px;
   }
   .right {
     transform: rotate(-45deg);
@@ -73,9 +73,12 @@
     float: right;
   }
   .main {
-    background-image: url("pics/alex.jpg");
+    background: #000000;
+    background-image: url("pics/newLogo.PNG");
     padding: 100px 100px;
     background-size: 100%;
+    background-repeat:no-repeat;
+    /* background: transparent; */
   }
   .mainText {
     color: #fff;
@@ -88,8 +91,11 @@
   .container-fluid {
     padding: 60px 50px;
   }
-  .bg-grey {
+  .first-block-color {
     background-color: #f6f6f6;
+  }
+  .second-block-color {
+    background-color: #FFFFFF;
   }
   .logo-small {
     color: #FDB913;
@@ -178,7 +184,7 @@
     font-family: Montserrat, sans-serif;
   }
   .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: #000000 !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #FDB913 !important;
@@ -189,7 +195,7 @@
     color: #fff !important;
   }
   footer .glyphicon {
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 20px;
     color: #FDB913;
   }
@@ -228,15 +234,24 @@
     background-size: 100%;
     /* background-position: 100% 0%; */
     /* background-position-x: 200px; */
-    background-position-y: -400px;
+    background-position-y: -400px; /* This is for position */
   }
   .mainText {
     padding: 22px;
   }
+  .quoteButton {
+      margin: 5% 3% 0 0;
+      padding: 50px 50px;
+      font-size: 20px;
+    }
   }
   /* Desktop --------------------------------------------------------------------*/
   @media screen and (min-width: 801px) {
     .col-sm-4 {
+      text-align: center;
+      margin: 25px 0px;
+    }
+    .quote-button {
       text-align: center;
       margin: 25px 0px;
     }
@@ -246,13 +261,13 @@
     }
     .main {
     padding: 100px 100px;
-    background-size: 100%;
-    /* background-position: 100% 0%; */
-    /* background-position-x: 200px; */
+    background-size: 20%;
+    background-position-x: 50%;
+    background-position-Y: 50%;
     }
     .quoteButton {
-      margin: 70px 150px;
-      padding: 50px 50px;
+      margin: 8% 3% 0 0;
+      padding: 25px 25px;
       font-size: 20px;
     }
   }
@@ -263,13 +278,24 @@
     }
     .main {
     padding: 100px 100px;
-    background-size: 100%;
+    background-size: 80%;
+    background-position-x: 50%;
+    background-position-Y: 55%;
   }
   .action_button {
     margin-top: 8px;
     font-size: 13px;
     font-weight: 600;
   }
+  .quote-button {
+      text-align: center;
+      margin: 0px 0px;
+    }
+    .quoteButton {
+      margin: 5% 3% 0 0;
+      padding: 20px 20px;
+      font-size: 20px;
+    }
   }
 </style>
 <body id="smoothPainting" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -277,48 +303,62 @@
 <!-- NavBar ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#smoothPainting">
-      <img src="pics/transBackCut.png" alt="" style="max-width:200px;position:fixed;top:-40px">
-    </a>
-    <div class="action_button">
-      <a class="action_button transition" href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">
-      <span>(612) 440-3665</span>
-      </a>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#smoothPainting">Smooth Painting</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#why">ABOUT</a></li>
+          <li><a href="#ourWork">OUR WORK</a></li>
+          <li><a href="#reviews">REVIEWS</a></li>
+          <li><a href="https://smoothpainting.DripJobs.com">FREE ESTIMATE</a></li>
+          <li style="background-color: #D2232A;"><a href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">CALL NOW</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- Main ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="main">
-  <div class="mainText text-center">
+  <!-- <div class="mainText text-center">
     <h1 style="font-family: 'New Century Schoolbook, TeX Gyre Schola, serif'">Smooth Painting</h1>
     <p style="font-family: 'Helvetica Neue'">Interior Painting <br>in the Twin Cities</p>
-  </div>
+  </div> -->
+  <br><br>
+  <br><br>
+  <br><br>
   <br><br>
 </div>
 
 <!-- Container (About Section) ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="about" class="container-fluid bg-grey">
+<div id="about" class="container-fluid first-block-color">
   <div class="row">
     <div class="col-sm-8">
       <h2>Free Estimates</h2><br>
       <h4>Founded here in the Twin Cities, we are a full service painting company that specializes on residential painting including walls, ceilings, trim, and doors.</h4><br>
-      <h4><strong>MISSION:</strong> No job is too large or too difficult for us. We pride ourselves on our professionalism, quality, and skillset. Click the "Request Quote" button for a free quote!</h4><br>
+      <h4><strong>MISSION:</strong> No job is too large or too difficult for us. We pride ourselves on our professionalism, quality, and skillset.</h4><br>
       <!-- <p>Our mission is to change the way homes are painted around the country.</p> -->
     </div>
     <!-- Quote Button -->
-    <div class="col-sm-4">
+    <div class="quote-button">
       <form action="https://smoothpainting.DripJobs.com">
-         <button class = "quoteButton" type="submit">
-             Request Quote  <i class="arrow right"></i>
+         <button class = "quoteButton" type="submit"> <!-- TODO: consolidate quoteButton & quote-button -->
+             SCHEDULE NOW  <i class="arrow right"></i>
          </button>
      </form>
      </div>
   </div>
 </div>
 
-<!-- Services ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="services" class="container-fluid text-center">
+<!-- Why Smooth Painting ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="why" class="container-fluid text-center second-block-color">
   <h2>Why Smooth Painting</h2>
   <h4>What we offer</h4>
   <br>
@@ -361,8 +401,8 @@
 
 <!-- Our Work ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- For before&After crops use terminal cmd: convert +append 1.HEIC 2.HEIC comb.jpg -->
-<div id="ourWork" class="container-fluid text-center bg-grey">
-  <h2>RECENT WORK</h2><br>
+<div id="ourWork" class="container-fluid text-center first-block-color">
+  <h2>OUR WORK</h2><br>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
@@ -385,11 +425,13 @@
         <p>Brighter Color for a more modern look.</p>
       </div>
     </div>
-  </div><br>
+  </div>
+</div><br>
 
 <!-- Reviews ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="reviews" class="container-fluid text-center second-block-color">
 <h2>What our customers say</h2>
-  <div id="myCarousel" class="carousel slide text-center bg-grey" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide text-center second-block-color" data-ride="carousel">
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -425,10 +467,10 @@
       <span class="sr-only">Next</span>
     </a> -->
   </div>
-</div>
+</div><br>
 
 <!-- Contact ------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid first-block-color">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
