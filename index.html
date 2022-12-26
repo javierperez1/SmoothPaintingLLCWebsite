@@ -236,7 +236,7 @@
       -webkit-transform: translateY(0%);
     }
   }
-   /* Desktop --------------------------------------------------------------------*/
+   /* Desktop TODO: check if this is monitor --------------------------------------------------------------------*/
    @media screen and (max-width: 2000px) {
     .main {
     padding: 100px 100px;
@@ -259,6 +259,13 @@
     }
     .call-now {
       display: none;
+    }
+    .phone-number-desktop {
+      display: block;
+      background-color: #D2232A;
+    }
+    .call-now-mobile {
+    display: none !important;
     }
   }
   /* Desktop --------------------------------------------------------------------*/
@@ -288,6 +295,13 @@
     }
     .call-now {
       display: none;
+    }
+    .phone-number-desktop {
+      display: block;
+      background-color: #D2232A;
+    }
+    .call-now-mobile {
+      display: none !important;
     }
   }
   /* Phone, could use 550 like certapro --------------------------------------------------------------------*/
@@ -332,6 +346,13 @@
     font-size: 20px;
     cursor: pointer;
   }
+  .call-now-mobile {
+    display: block;
+    background-color: #D2232A;
+  }
+  .phone-number-desktop {
+      display: none;
+  }
   }
 </style>
 <body id="smoothPainting" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -354,7 +375,9 @@
           <li><a href="#ourWork">OUR WORK</a></li>
           <li><a href="#reviews">REVIEWS</a></li>
           <li><a href="https://smoothpainting.DripJobs.com">FREE ESTIMATE</a></li>
-          <li style="background-color: #D2232A;"><a href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">CALL NOW</a></li>
+          <!-- <li style="background-color: #D2232A;"><a href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">CALL NOW</a></li> -->
+          <li class="call-now-mobile"><a href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">CALL NOW</a></li>
+          <li class="phone-number-desktop"><a href="tel:+1612-440-3665" onclick="evtTrack('Landing', 'Phone', 'Header');">612-440-3665</a></li>
         </ul>
       </div>
     </div>
@@ -466,6 +489,7 @@
         <p>Brighter Color for a more modern look.</p>
       </div>
     </div>
+    <!-- https://sharethis.com/best-practices/2019/02/how-to-embed-a-facebook-feed-on-website/ -->
     <!-- <div class="col-sm-4">
       <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmoothpaintingco&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div> -->
